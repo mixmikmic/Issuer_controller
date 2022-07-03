@@ -1,0 +1,48 @@
+<div class="card shadow-sm">
+    <div class="card-body">
+        <a type="button" class="close" aria-label="Close"
+            href="/subwallet/{{ subwallet.connection_id }}/remove?state={{ subwallet.state }}">
+            <span aria-hidden="true">&times;</span>
+        </a>
+
+        <div class="card-title">
+            <small>
+                {{#eq subwallet.initiator "self"}}
+                <span>Sent&nbsp;</span>
+                {{/eq}}
+                {{#eq subwallet.initiator "external"}}
+                <span>Received&nbsp;</span>
+                {{/eq}}
+            </small>
+            <small class="text-muted">{{ subwallet.created_at }}</small>
+        </div>
+        <div class="card-text">
+            <span>
+                {{#eq subwallet.initiator "self"}}
+                <small class="text-muted">To:&nbsp;</small>
+                {{/eq}}
+                {{#eq subwallet.initiator "external"}}
+                <small class="text-muted">From:&nbsp;</small>
+                {{/eq}}
+            </span>
+            <span>{{ subwallet.name }}</span>
+        </div>
+        <div class="card-text">
+            <span>
+                <small class="text-muted">DID:</small>&nbsp;
+            </span>
+            <span>{{ subwallet.wallet.id }}</span>
+        </div>
+        <div class="card-text">
+            <div>
+                <small class="text-muted">subwallet ID:</small>
+            </div>
+            <span>{{ subwallet.wallet_id }}</span>
+        </div>
+    </div>
+    <div class="card-footer">
+        <p class="card-text">
+            <small class="text-muted">Last updated {{ subwallet.created_at }}</small>
+        </p>
+    </div>
+</div>

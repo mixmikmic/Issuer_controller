@@ -1,0 +1,22 @@
+[
+    {
+        "label": "Connections",
+        "url": "/connections"
+    },
+    {
+        "label": "Proof Requests",
+        "url": "/proofs"
+    },
+    {
+        "label": "Sub Wallet",
+        "url": "/subWallet"
+    },
+    {
+        "label": "Schema",
+        "url": "/schema"
+    },
+    {
+        "label": "Credentials",
+        "url": "/credential"
+    }
+]

@@ -1,0 +1,46 @@
+<div class="card shadow-sm">
+    <div class="card-body">
+        <a type="button" class="close" aria-label="Close"
+            href="/schema/{{ schema.connection_id }}/remove?state={{ schema.state }}">
+            <span aria-hidden="true">&times;</span>
+        </a>
+
+        <div class="card-title">
+            <small>
+                {{!-- {{#eq schema.schema_ids "self"}}
+                <span>Sent&nbsp;</span>
+                {{/eq}}
+                {{#eq schema.schema_ids "external"}}
+                <span>Received&nbsp;</span>
+                {{/eq}} --}}
+                 <span>Schema&nbsp;</span>
+            </small>
+            <small class="text-muted">{{ schema.created_at }}</small>
+        </div>
+        <div class="card-text">
+            <span>
+ 
+                <small class="text-muted">Schema :&nbsp;</small>
+      
+            </span>
+            <span>{{ schema.schema_name }}</span>
+        </div>
+        <div class="card-text">
+            <span>
+                <small class="text-muted">ID :</small>&nbsp;
+            </span>
+            <span>{{ schema.schema_id }}</span>
+        </div>
+                <div class="card-text">
+            <span>
+                <small class="text-muted">Attribute :</small>&nbsp;
+            </span>
+            <span>{{ schema.details.attrNames }}</span>
+        </div>
+    </div>
+    <div class="card-footer">
+        <p class="card-text">
+            <small class="text-muted">Last updated {{ subwallet.created_at }}</small>
+        </p>
+    </div>
+</div>

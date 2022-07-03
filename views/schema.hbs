@@ -1,0 +1,15 @@
+{{> component_nav moreNavLinks=navLinks}}
+
+<div class="content">
+    {{#if schema}}
+    <div class="card-columns">
+        {{#each schema}}
+        {{> schema_card schema=this }}
+        {{/each}}
+    </div>
+    {{else}}
+    {{> empty_list }}
+    {{/if}}
+</div>
+
+<script src="/js/schema.js"></script>

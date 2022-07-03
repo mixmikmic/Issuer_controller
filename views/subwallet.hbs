@@ -1,0 +1,13 @@
+{{> component_nav moreNavLinks=navLinks}}
+
+<div class="content">
+    {{#if subwallet}}
+    <div class="card-columns">
+        {{#each subwallet}}
+        {{> subwallet_card subwallet=this}}
+        {{/each}}
+    </div>
+    {{else}}
+    {{> empty_list }}
+    {{/if}}
+</div>
